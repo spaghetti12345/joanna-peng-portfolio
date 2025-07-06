@@ -18,7 +18,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-40 bg-[rgba(10,10,10,0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg transition-transform duration-200 ${
+      className={`fixed top-0 w-full z-40 bg-[rgba(0, 0, 0, 0.5)] backdrop-blur-lg shadow-lg transition-transform duration-200 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -39,10 +39,10 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           </div> */}
 
           <div className="absolute left-1/2 -translate-x-1/2 items-center space-x-5 text-xs">
-            <a href="#home" className="text-[#E4C9FB] hover:text-white transition-colors"> home </a>
-            <a href="#about" className="text-[#E4C9FB] hover:text-white transition-colors"> about </a>
-            <a href="#projects" className="text-[#E4C9FB] hover:text-white transition-colors"> projects </a>
-            <a href="#contact" className="text-[#E4C9FB] hover:text-white transition-colors"> contact </a>
+            <a href="#about" className="text-[var(--light)] hover:text-[#E4C9FB] transition-colors"> about </a>
+            <a href="#projects" className="text-[var(--light)] hover:text-[#E4C9FB] transition-colors"> projects </a>
+            <a href="#hobbies" className="text-[var(--light)] hover:text-[#E4C9FB] transition-colors"> hobbies </a>
+            <a href="#contact" className="text-[var(--light)] hover:text-[#E4C9FB] transition-colors"> contact </a>
           </div>
 
           <div className="flex items-center space-x-1">

@@ -8,6 +8,7 @@ import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import "./index.css";
 import { Contact } from "./components/sections/Contact";
+import { Hobbies } from "./components/sections/Hobbies";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -19,13 +20,14 @@ function App() {
       <div
         className={`min-h-screen transition-opacity duration-700 ${
           isLoaded ? "opacity-100" : "opacity-0"
-        } bg-black text-gray-100`}
+        } bg-[var(--background)] text-[var(--light)]`}
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Home />
         <About />
         <Projects />
+        <Hobbies />
         <Contact />
       </div>
     </>
