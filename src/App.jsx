@@ -24,6 +24,7 @@ function App() {
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <img src="jplogo.svg" className="w-full h-auto" />
         <Home />
         <About />
         <Projects />
