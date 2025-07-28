@@ -1,11 +1,13 @@
 import { useRef } from "react";
+import birb from "/images/hobbies/birb.jpeg";
+import sculpture2 from "/images/hobbies/paperwhale2.png";
+import sketch from "/images/hobbies/sculpture1.jpg";
+import painting from "/images/hobbies/painting.jpeg";
+
+
 
 const images = [
-  '/images/img1.jpg',
-  '/images/img2.jpg',
-  '/images/img3.jpg',
-  '/images/img4.jpg',
-  '/images/img5.jpg',
+  birb, sculpture2, sketch, painting,
 ];
 
 export const Hobbies = () => {
@@ -27,7 +29,7 @@ export const Hobbies = () => {
       {/* Left arrow */}
       <button
         onClick={scrollLeft}
-        className="absolute left-2 top-1/2 -translate-y-1/100 bg-white text-black rounded-full p-2 shadow-md z-10 hover:bg-blue-500 hover:text-white transition"
+        className="absolute left-2 top-1/2 -translate-y-1/100 bg-[var(--light)] text-black rounded-full p-2 shadow-md z-10 hover:bg-blue-500 hover:text-white transition"
       >
         &lt;
       </button>
@@ -41,11 +43,10 @@ export const Hobbies = () => {
           {images.map((src, index) => (
             <div
               key={index}
-              className="min-w-[200px] h-[200px] rounded overflow-hidden shadow-md bg-gray-200 shrink-0 hover:scale-105 transition-transform duration-300"
+              className="min-w-[200px] h-[200px] rounded overflow-hidden shadow-md shrink-0 hover:scale-105 transition-transform duration-300"
             >
               <img
                 src={src}
-                alt={`Image ${index + 1}`}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -56,7 +57,7 @@ export const Hobbies = () => {
       {/* Right arrow */}
       <button
         onClick={scrollRight}
-        className="absolute right-2 top-1/2 -translate-y-1/100 bg-white text-black rounded-full p-2 shadow-md z-10 hover:bg-blue-500 hover:text-white transition"
+        className="absolute right-2 top-1/2 -translate-y-1/100 bg-[var(--light)] text-black rounded-full p-2 shadow-md z-10 hover:bg-blue-500 hover:text-white transition"
       >
         &gt;
       </button>

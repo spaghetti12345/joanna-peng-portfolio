@@ -33,21 +33,35 @@ export const Contact = () => {
         <h2 className="koulen-font text-4xl">LET'S CONNECT!</h2>
         
         <div className="flex gap-5">
-          <button className="text-[10px] bg-white rounded-lg py-1 px-5 mt-5">
-            Email
-          </button>
 
-          <button className="text-[10px] bg-white rounded-lg py-1 px-5 mt-5">
-            LinkedIn
-          </button>
+          <div className="text-[10px] text-black bg-[var(--light)] rounded-lg py-1 px-5 mt-5">
+            <a href = "mailto:j85peng@uwaterloo.ca"> Email           
+            </a>
+          </div>
 
-          <button className="text-[10px] bg-white rounded-lg py-1 px-5 mt-5">
-            Github
-          </button>
+          <div className="text-[10px] text-black bg-[var(--light)] rounded-lg py-1 px-5 mt-5">
+            <a href = "https://www.linkedin.com/in/joannapeng1234/"
+            target="_blank"
+            rel="noopener noreferrer"
+            > LinkedIn             
+            </a>
+          </div>
 
-          <button className="text-[10px] bg-white rounded-lg py-1 px-5 mt-5">
-            Resume
-          </button> 
+          <div className="text-[10px] text-black bg-[var(--light)] rounded-lg py-1 px-5 mt-5">
+            <a href = "https://github.com/spaghetti12345"
+            target="_blank"
+            rel="noopener noreferrer"
+            > Github             
+            </a>
+          </div>
+
+          <div className="text-[10px] text-black bg-[var(--light)] rounded-lg py-1 px-5 mt-5">
+            <a href = "https://drive.google.com/file/d/1JqKELzXjVxfiTbkJM10PjEganCJ4UOAV/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            > Resume             
+            </a>
+          </div>
 
         </div>
     
