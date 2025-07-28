@@ -1,12 +1,25 @@
 import { useState } from "react";
 
-const images = import.meta.glob('../../assets/ScoopAbility/*.png', { eager: true });
-const imagePaths = Object.values(images).map((mod) => mod.default);
+// const images = import.meta.glob([
+//   '../../assets/images/*.png',
+//   '../../assets/images/*.jpg'
+// ], { eager: true });
+// const imagePaths = Object.values(images).map((mod) => mod.default);
+
+import scoopability from "/images/scoopability.png";
+import finalMediumPrototype from "/images/final medium prototype.png";
+import printedPuzzle from "/images/printed puzzle.jpg";
+import SWpuzzleproj from "/images/SW puzzle proj.png";
+import sleepLogo from "/images/sleeperception logo.png";
+import sleepMobile from "/images/sleeperception mobile.png";
+import ttCover from "/images/talon times fall 2023.png";
+import ttuiux from "/images/ttwebsite.png";
+import ttposts from "/images/ttposts.png";
 
 const projects = [
   { id: 1, 
-    title: "Scoopability", 
-    image: imagePaths[1],
+    title: "ScoopAbility", 
+    image: finalMediumPrototype,
     description: "Assistive wrist device to enhance physical activity for children with cerebral palsy", 
     skills: ["Engineering Design", "Collaboration", "Prototyping", "Technical Documentation"],
     details: (
@@ -20,8 +33,7 @@ const projects = [
           This project aims to design a product that enhances safety and supports inclusive engagement in physical activity for children living with disabilities.
         </p>
         <div className="flex gap-2 my-2 dislay-flex items-center">
-          <img src={imagePaths[0]} className="w-1/3 h-auto" />
-          <img src={imagePaths[1]} className="h-32 w-auto object-contain rounded" />
+          <img src={scoopability} className="w-full h-auto" />
         </div>
         <h4 className="font-bold mt-2">Stages</h4>
         <ul className="list-disc ml-4">
@@ -76,17 +88,92 @@ const projects = [
       </div>
     ),
   },
-  { id: 2, title: "Project Two", 
-    description: "Another awesome project description...", 
-    skills: ["React", "UI/UX", "API Integration"] },
+  { id: 2, title: "3D Chimera Puzzle", 
+    description: "A dynamic 3D-printed puzzle of a chimera-like creature using SolidWorks.", 
+    image: printedPuzzle,
+    skills: ["3D Printing", "SolidWorks", "Design for Assembly"],
+details: (
+  <div className="space-y-3 text-left">
+    <div className="flex gap-2 my-2 items-center">
+      <img src={SWpuzzleproj} className="w-full h-auto" />
+    </div>
+    <h4 className="font-bold mt-2">Requirements</h4>
+    <ul className="list-disc ml-4">
+      <li>Include dynamic components</li>
+      <li>Ensure compliance with time and volume constraints (for 3D printing)</li>
+      <li>Theme must center around a “Canadian motive”</li>
+    </ul>
+    <h4 className="font-bold mt-2">Design Process</h4>
+    <ul className="list-disc ml-4">
+      <li>
+        <span className="font-semibold">Brainstorming:</span>
+        <ul className="list-disc ml-4">
+          <li>Narrowed down Canadian motive theme; decided to combine iconic Canadian animals into a Chimera-like creature</li>
+          <li>Brainstormed possible dynamic components</li>
+          <li>Optimized puzzle connectors (e.g., pin joints, ball and socket joints, etc.)</li>
+        </ul>
+      </li>
+      <li>
+        <span className="font-semibold">Sketching:</span>
+        <ul className="list-disc ml-4">
+          <li>Sketched out ideas and created refined sketches of all the parts</li>
+          <li>Determined appropriate dimensions to fit within the volume constraints</li>
+        </ul>
+      </li>
+      <li>
+        <span className="font-semibold">Modelling:</span>
+        <ul className="list-disc ml-4">
+          <li>Modelled the parts in SolidWorks following the sketches and dimensions</li>
+        </ul>
+      </li>
+      <li>
+        <span className="font-semibold">Assembly:</span>
+        <ul className="list-disc ml-4">
+          <li>Assembled all the parts in SolidWorks to ensure proper fitting</li>
+        </ul>
+      </li>
+      <li>
+        <span className="font-semibold">Printing:</span>
+        <ul className="list-disc ml-4">
+          <li>Optimized 3D printing settings</li>
+        </ul>
+      </li>
+      <li>
+        <span className="font-semibold">Creating Assembly Manual:</span>
+        <ul className="list-disc ml-4">
+          <li>Used SolidWorks Composer to create an easy-to-follow instruction manual</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+),
+  },
   { id: 3, 
-    title: "Project Three", 
-    description: "Yet another project description...", 
-    skills: ["JavaScript", "Testing", "Deployment"] },
+    title: "SleePerception", 
+    image: sleepLogo,
+    description: "Tracking sleep patterns of geriatric patients using computer vision to detect onset symptoms of delirium", 
+    skills: ["Engineering Design", "Collaboration", "Python", "OpenCV", "MediaPipe"], 
+    details: (
+    <div className="gap-2 my-2 items-center">
+      <p className="pb-3"> Mobile App UI: </p>
+      <img src={sleepMobile} className="w-full h-auto" />
+    </div>
+
+    ),
+  },
   { id: 4, 
-    title: "Project Four", 
-    description: "A fourth project description...", 
-    skills: ["Design", "Docs", "Teamwork"] }
+    title: "UI/UX Design", 
+    image: ttCover,
+    description: "UI/UX & graphic design pieces for Talon Times Newspaper Club", 
+    skills: ["UI/UX Design", "Figma", "Canva"],
+    details: (
+      <div className="gap-2 my-2 items-center">
+        <p className="pb-3"> Design Mockups: </p>
+        <img src={ttuiux} className="w-full h-auto" />
+        <img src={ttposts} className="w-full h-auto" />
+      </div>
+    ),
+  }
 ];
 
 export const Projects = () => {
@@ -113,7 +200,7 @@ export const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="h-full object-contain"
+                    className="h-full w-full object-cover"
                   />
                 )}
               </div>

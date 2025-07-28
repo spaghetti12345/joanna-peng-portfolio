@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import jplogo from '../assets/jplogo.svg';
+import linkedinIcon from "/linkedin-icon.svg"; // Adjust the path as necessary
+import mailIcon from "/mail-icon.svg"; // Adjust the path as necessary
+import resumeIcon from "/resume-icon.svg";
 
 export const Navbar = ({ menuOpen, setMenuOpen }) => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -45,11 +48,31 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
             <a href="#contact" className="text-[var(--light)] hover:text-[#E4C9FB] transition-colors"> contact </a>
           </div>
 
-          <div className="flex items-center space-x-1">
-            <div className="w-5 h-5 bg-[#E4C9FB] rounded-md"></div>
-            <div className="w-5 h-5 bg-[#E4C9FB] rounded-md"></div>
-            <div className="w-5 h-5 bg-[#E4C9FB] rounded-md"></div>
+          <div className="flex items-center space-x-2">
+            <a
+              href="https://www.linkedin.com/in/joannapeng1234/"
+              className="w-4 h-4 rounded-lg flex items-center justify-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedinIcon} alt="LinkedIn" />
+            </a>
 
+            <div className="w-4 h-4 rounded-md">
+              <a href = "mailto:j85peng@uwaterloo.ca">
+                <img src={mailIcon} alt="Mail" />
+              </a>
+              
+            </div>
+
+            <div className="w-4 h-4 rounded-md">
+              <a href = "https://drive.google.com/file/d/1JqKELzXjVxfiTbkJM10PjEganCJ4UOAV/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              >              
+              <img src={resumeIcon} alt="Resume" />
+              </a>
+            </div>
           </div>
 
         </div>
